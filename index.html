@@ -11,7 +11,7 @@
     <div id="main">
       <div id="roll"></div>
     </div>
-    <script src="https://cdn.rawgit.com/ccampbell/mousetrap/825ce50c/mousetrap.min.js"></script>
+    <script src="mousetrap.min.js"></script>
     <script>
       var cntg = 9;
       m1 = [
@@ -39,12 +39,12 @@
         212123002, 212123003, 212123004, 212123005, 212123006, 212123007,
         212123009, 212123010, 212123011, 212123012, 212123013, 212123014,
         212123015, 212123016, 212123017, 212123018, 212123021,
-        212123025, 212123026, 212123027,
+        212123025, 212123026, 
         212123028, 212123030, 212123031, 212123032, 212123033, 212123034,
         212123035, 212123036, 212123037, 212123038, 212123041,
         212123042, 212123043, 212123046, 212123048,
-        212123049, 212123053, 212123054, 212123057, 212123055,
-        212123058,
+        212123049, 212123053, 212123054, 212123055,
+        212123058, 212123027
       ];
       mm=[
       264174360,
@@ -150,7 +150,7 @@
       ];
       var cntb = m2.length;
       var cntg1=m3.length;
-      var cntb1=m4.length;
+      var cntb1=m4.length-1;
       Mousetrap.bind("g", function () {
         if (cntg <= 0) cntg = m1.length;
         var x = Math.floor(Math.random() * cntg);
@@ -185,7 +185,7 @@
         cntb--;
       });
       Mousetrap.bind("n", function () {
-        if (cntb1 <= 0) cntb1 = m4.length;
+        if (cntb1 <= 0) cntb1 = m4.length-1;
         var x = Math.floor(Math.random() * cntb1);
         console.log(x);
         //cntg--;
